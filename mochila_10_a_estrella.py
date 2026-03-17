@@ -33,7 +33,7 @@ def heuristica_mochila(indice_actual,capacidad_restante,pesos,valores):
 
     return estimacion
 
-def mochila_10_a_estrella(pesos,valores,capacidad_maxima):
+def mochila_100_a_estrella(pesos,valores,capacidad_maxima):
    #estado_k = (indice_objeto, peso_acumulado, valor acumulado, objetos_seleccionados) 
     estado_0 = (0,0,0, ())
     f_inicial = heuristica_mochila(0,capacidad_maxima,pesos,valores)
@@ -74,7 +74,7 @@ def mochila_10_a_estrella(pesos,valores,capacidad_maxima):
 
 inicio_ejecucion = time.time()
 
-valor_final, estado_final, peso_final,nodos_expandidos = mochila_10_a_estrella(pesos,valores,peso_maximo)
+valor_final, estado_final, peso_final,nodos_expandidos = mochila_100_a_estrella(pesos,valores,peso_maximo)
 
 fin_ejecucion = time.time()
 
