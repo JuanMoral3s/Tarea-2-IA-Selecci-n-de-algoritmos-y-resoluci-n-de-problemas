@@ -6,11 +6,11 @@ import time
 # Obtener el peso maximo del txt
 with open("capacidades_mochila.txt" , "r" , encoding="utf-8") as archivo:
     contenido = archivo.read()
-    resultado = re.search(r"capacidad=(\d+)", contenido)
+    resultado = re.search(r"mochila_100 capacidad=(\d+)", contenido)
     peso_maximo = int(resultado.group(1))
 
 # Datos de los objetos
-datos_objetos = pandas.read_csv("mochila_10.csv")
+datos_objetos = pandas.read_csv("mochila_100.csv")
 pesos = datos_objetos['peso'].to_list()
 valores = datos_objetos['valor'].to_list()
 
